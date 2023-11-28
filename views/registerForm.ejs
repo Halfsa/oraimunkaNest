@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Új felhasználó felvétele</h1>
+  <form method="post">
+    <label>
+      E-mail: <br>
+      <input type="email"name="email">
+    </label>
+    <label>
+      Jelszó: <br>
+      <input type="password"name="password">
+    </label>
+    <label>
+      Jelszó mégegszer: <br>
+      <input type="password" name="password_again">
+    </label>
+    <label>
+      Életkor: <br>
+      <input type="number" name="age">
+    </label>
+    <% errors.forEach(message => {%>
+      <p style="color: red;"><%= message %></p>
+    <% }); %>
+    <input type="submit" value="Regisztráció">  
+  </form>
+  </body>
+</html>

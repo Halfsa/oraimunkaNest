@@ -9,6 +9,12 @@
     <script src='main.js'></script>
 </head>
 <body>
+    <form method="post" action="/login">
+      <input type="email" placeholder="E-mail" name="email">
+      <input type="password" placeholder="Jelszó" name="password">
+      <input type="submit" value="Bejelentkezés">
+    </form>
+    <a href="./register">Tovább a regisztrációra</a>
     <p><%= message %></p>
 </body>
 </html>
