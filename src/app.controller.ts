@@ -31,11 +31,11 @@ export class AppController {
     if (registration.password !== registration.password_again) {
       errors.push('A két jelszó nem egyezik');
     }
-    if (parseInt(registration.age) <= 0) {
-      errors.push('Az életkor nem megfelelő');
-    }
     if (registration.age == '') {
       errors.push('Adja meg az életkort');
+    }
+    if (parseInt(registration.age) <= 18) {
+      errors.push('Az életkor 18 fölötti szám kell hogy legyen');
     }
     if (errors.length > 0) {
       return {
