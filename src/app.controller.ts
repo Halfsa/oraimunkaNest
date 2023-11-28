@@ -6,7 +6,7 @@ import { User } from './user';
 const users: User[] = [new User('admin@example.com', 'asdf1234', 23)];
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) { }
+  constructor(private readonly appService: AppService) {}
 
   @Get('register')
   @Render('registerForm')
